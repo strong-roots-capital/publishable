@@ -80,7 +80,7 @@ Extend a `Readable` stream to allow publishing chunks rather than reading chunks
 
 *Overrides Readable.__constructor*
 
-*Defined in [publishable.ts:21](https://github.com/strong-roots-capital/publishable/blob/0ceb23e/src/publishable.ts#L21)*
+*Defined in [publishable.ts:21](https://github.com/strong-roots-capital/publishable/blob/c4e2c3b/src/publishable.ts#L21)*
 
 Create a Publishable stream.
 
@@ -113,7 +113,7 @@ ___
 
 **● barrier**: *`function`*
 
-*Defined in [publishable.ts:21](https://github.com/strong-roots-capital/publishable/blob/0ceb23e/src/publishable.ts#L21)*
+*Defined in [publishable.ts:21](https://github.com/strong-roots-capital/publishable/blob/c4e2c3b/src/publishable.ts#L21)*
 
 #### Type declaration
 ▸(value?: *`T` \| `undefined`*): `Promise`<`T`[]>
@@ -144,7 +144,7 @@ ___
 
 **● queue**: *(`null` \| `T`)[]* =  []
 
-*Defined in [publishable.ts:20](https://github.com/strong-roots-capital/publishable/blob/0ceb23e/src/publishable.ts#L20)*
+*Defined in [publishable.ts:20](https://github.com/strong-roots-capital/publishable/blob/c4e2c3b/src/publishable.ts#L20)*
 
 ___
 <a id="readable"></a>
@@ -1077,7 +1077,7 @@ ___
 
 ▸ **publish**(chunk: *`T` \| `null`*): `void`
 
-*Defined in [publishable.ts:58](https://github.com/strong-roots-capital/publishable/blob/0ceb23e/src/publishable.ts#L58)*
+*Defined in [publishable.ts:58](https://github.com/strong-roots-capital/publishable/blob/c4e2c3b/src/publishable.ts#L58)*
 
 Push chunk through the Readable stream.
 
