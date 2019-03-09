@@ -2,8 +2,8 @@
   "name": "@strong-roots-capital/publishable",
   "version": "0.0.1",
   "description": "Publishable (Readable) stream",
-  "main": "dist/publishable.js",
-  "types": "dist/publishable.d.ts",
+  "main": "dist/src/publishable.js",
+  "types": "dist/src/publishable.d.ts",
   "scripts": {
     "install": "tsc",
     "ava": "ava -s -v",
@@ -40,13 +40,20 @@
   },
   "homepage": "https://github.com/strong-roots-capital/publishable",
   "dependencies": {
+    "@strong-roots-capital/barrier": "^1.0.0",
     "@types/node": "^10.12.18",
+    "@types/readable-stream": "^2.3.1",
+    "debug": "^4.1.1",
+    "readable-stream": "^3.2.0",
+    "supports-color": "^6.1.0",
     "typescript": "^3.2.2"
   },
   "devDependencies": {
+    "@types/is-array-sorted": "^1.0.0",
     "ava": "^1.0.0",
     "codecov": "^3.1.0",
     "husky": "^1.3.1",
+    "is-array-sorted": "^1.0.0",
     "nyc": "^13.1.0",
     "tap-nyc": "^1.0.3",
     "ts-node": "^7.0.1",
