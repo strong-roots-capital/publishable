@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/publishable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Publishable (Readable) stream",
   "main": "dist/publishable.js",
   "types": "dist/publishable.d.ts",
