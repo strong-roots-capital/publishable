@@ -4,7 +4,7 @@
  */
 
 namespace debug {
-    export const stream = require('debug')('pushable')
+    export const stream = require('debug')('publishable')
 }
 
 import { Readable } from 'readable-stream'
