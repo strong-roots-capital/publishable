@@ -15,7 +15,7 @@ import makeBarrier from '@strong-roots-capital/barrier'
  * Extend a `Readable` stream to allow publishing chunks rather than
  * reading chunks.
  */
-export default class Publishable<T> extends Readable {
+export default class Publishable<T = any> extends Readable {
 
     queue: (T | null)[] = []
     barrier: (value?: T | undefined) => Promise<T[]>
