@@ -2,8 +2,8 @@
   "name": "@strong-roots-capital/publishable",
   "version": "1.0.4",
   "description": "Publishable (Readable) stream",
-  "main": "dist/publishable.js",
-  "types": "dist/publishable.d.ts",
+  "main": "dist/src/publishable.js",
+  "types": "dist/src/publishable.d.ts",
   "scripts": {
     "prepublishOnly": "npm run compile",
     "compile": "npm run clean && tsc",
@@ -21,7 +21,7 @@
     "push-and-publish": "npm run push-with-tags && npm publish"
   },
   "files": [
-    "dist/"
+    "dist/src/"
   ],
   "husky": {
     "hooks": {
