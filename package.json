@@ -48,7 +48,7 @@
     "readable-stream": "^3.2.0"
   },
   "devDependencies": {
-    "@types/node": "^10.12.18",
+    "@types/node": "^12.12.8",
     "@types/is-array-sorted": "^1.0.0",
     "ava": "^1.0.0",
     "codecov": "^3.1.0",
@@ -57,10 +57,10 @@
     "nyc": "^13.1.0",
     "supports-color": "^6.1.0",
     "tap-nyc": "^1.0.3",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.5.2",
     "typedoc": "^0.13.0",
     "typedoc-plugin-markdown": "^1.1.20",
-    "typescript": "^3.2.2"
+    "typescript": "^3.7.2"
   },
   "ava": {
     "compileEnhancements": false,
