@@ -97,37 +97,6 @@ test.cb('should not drop any elements', t => {
     })
 })
 
-test.cb('should not publish any chunks after null', t => {
-    interface Objadillo {
-        arms: number
-        legs: number
-    }
-    const source = new Publishable({objectMode: true})
-
-    const sunk: Objadillo[] = []
-    const sink = new Writable({
-        objectMode: true,
-        write(chunk: Objadillo, _: string, callback: any) {
-            sunk.push(chunk)
-            callback()
-        }
-    })
-
-    source.pipe(sink)
-
-    const obi: Objadillo = {arms: 4, legs: 2}
-    source.publish(obi)
-    source.publish(null)
-    source.publish(obi)
-
-    sink.on('finish', () => {
-        setTimeout(() => {
-            t.deepEqual(sunk, [obi])
-            t.end()
-        }, 100)
-    })
-})
-
 test.cb('should preserve order of publication', t => {
 
     const source = new Publishable<string>()

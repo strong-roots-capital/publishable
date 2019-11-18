@@ -12,21 +12,14 @@ function main() {
         }
     })
 
-    setImmediate(() => {
-        source.publish('immediate')
-    })
-    setTimeout(() => {source.publish('fin')}, 1000)
-    setTimeout(() => {source.publish(null)}, 2000)
-    setTimeout(() => {source.publish("you won't see any chunks published after `null`")}, 2500)
+    source.pipe(sink)
 
     source.publish('hi there')
     source.publish('face here')
+    source.publish(null)
 
-    source.pipe(sink)
     //=> hi there
     //=> face here
-    //=> immediate
-    //=> fin
 }
 
 main()

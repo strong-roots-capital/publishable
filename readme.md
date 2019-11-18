@@ -18,8 +18,7 @@ conceptually.
 Sometimes it is easier to publish chunks when they become known,
 e.g. with EventEmitters or Observables. `Publishable` extends an
 ordinary `Readable` stream to offer `publish(chunk: T | null)` in
-stead of `read(size?: number)`. `Publishable` will buffer chunks in
-the event of back-pressure, although that should be kept to a minimum.
+stead of `read(size?: number)`.
 
 ## Install
 
@@ -40,27 +39,23 @@ const sink = new Writable({
     }
 })
 
+source.pipe(sink)
+
 source.publish('hi there')
 source.publish('face here')
 source.publish(null)
-
-source.pipe(sink)
 ```
 
 Note that `objectMode` is supported as are all other
 `_Readable.ReadableOptions`
 
 ``` typescript
-const source = new Publishable({objectMode: true})
+const source = new Publishable<T>({objectMode: true})
 ```
 
-Generics are also accepted to a limited extent (they do not carry over
-`pipe`s)
-
-``` typescript
-const source = new Publishable<FancyObject>({objectMode: true})
-```
-
+Generics are accepted to a limited extent (they do not carry over to
+any `pipe`d streams but can be used to limit what is published through
+a Publishable).
 
 
 ## Related

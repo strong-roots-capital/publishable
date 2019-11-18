@@ -3,12 +3,7 @@
  * Publishable (Readable) stream
  */
 
-namespace debug {
-    export const stream = require('debug')('publishable')
-}
-
 import { Readable } from 'readable-stream'
-import makeBarrier from '@strong-roots-capital/barrier'
 
 
 /**
@@ -16,9 +11,6 @@ import makeBarrier from '@strong-roots-capital/barrier'
  * reading chunks.
  */
 export default class Publishable<T = any> extends Readable {
-
-    queue: (T | null)[] = []
-    barrier: (value?: T | undefined) => Promise<T[]>
 
     /**
      * Create a Publishable stream.
@@ -29,25 +21,8 @@ export default class Publishable<T = any> extends Readable {
     constructor(options?: _Readable.ReadableOptions) {
         super({
             ...options,
-            read() {
-                const self: Publishable<T> = this as Publishable<T>
-                async function pushChunk() {
-                    let chunk = self.queue.shift()
-                    debug.stream('Shifted off chunk:', chunk)
-                    while (chunk === undefined) {
-                        debug.stream('Waiting at barrier')
-                        await self.barrier()
-                        self.barrier = makeBarrier<T>()
-                        chunk = self.queue.shift()
-                        debug.stream('Past barrier with chunk', chunk)
-                    }
-                    debug.stream('Pushing chunk', chunk)
-                    self.push(chunk)
-                }
-                pushChunk()
-            }
+            read() {}
         })
-        this.barrier = makeBarrier<T>()
     }
 
     /**
@@ -56,9 +31,6 @@ export default class Publishable<T = any> extends Readable {
      * @param chunk - Data to send through the Readable stream
      */
     publish(chunk: T | null) {
-        debug.stream('publish', chunk)
-        this.queue.push(chunk)
-        this.barrier()
+        this.push(chunk)
     }
-
 }
