@@ -78,7 +78,7 @@ Extend a `Readable` stream to allow publishing chunks rather than reading chunks
 
 *Overrides Readable.__constructor*
 
-*Defined in [publishable.ts:13](https://github.com/strong-roots-capital/publishable/blob/83ddacd/src/publishable.ts#L13)*
+*Defined in [publishable.ts:13](https://github.com/strong-roots-capital/publishable/blob/3cd53fa/src/publishable.ts#L13)*
 
 Create a Publishable stream.
 
@@ -1046,7 +1046,7 @@ ___
 
 ▸ **publish**(chunk: *`T` \| `null`*): `void`
 
-*Defined in [publishable.ts:33](https://github.com/strong-roots-capital/publishable/blob/83ddacd/src/publishable.ts#L33)*
+*Defined in [publishable.ts:33](https://github.com/strong-roots-capital/publishable/blob/3cd53fa/src/publishable.ts#L33)*
 
 Push chunk through the Readable stream.
 
