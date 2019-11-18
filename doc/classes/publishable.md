@@ -25,9 +25,7 @@ Extend a `Readable` stream to allow publishing chunks rather than reading chunks
 ### Properties
 
 * [_readableState](publishable.md#_readablestate)
-* [barrier](publishable.md#barrier)
 * [destroyed](publishable.md#destroyed)
-* [queue](publishable.md#queue)
 * [readable](publishable.md#readable)
 * [readableHighWaterMark](publishable.md#readablehighwatermark)
 * [readableLength](publishable.md#readablelength)
@@ -80,7 +78,7 @@ Extend a `Readable` stream to allow publishing chunks rather than reading chunks
 
 *Overrides Readable.__constructor*
 
-*Defined in [publishable.ts:21](https://github.com/strong-roots-capital/publishable/blob/425bed6/src/publishable.ts#L21)*
+*Defined in [publishable.ts:13](https://github.com/strong-roots-capital/publishable/blob/83ddacd/src/publishable.ts#L13)*
 
 Create a Publishable stream.
 
@@ -107,26 +105,6 @@ ___
 *Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/readable-stream/index.d.ts:16*
 
 ___
-<a id="barrier"></a>
-
-###  barrier
-
-**● barrier**: *`function`*
-
-*Defined in [publishable.ts:21](https://github.com/strong-roots-capital/publishable/blob/425bed6/src/publishable.ts#L21)*
-
-#### Type declaration
-▸(value?: *`T` \| `undefined`*): `Promise`<`T`[]>
-
-**Parameters:**
-
-| Name | Type |
-| ------ | ------ |
-| `Optional` value | `T` \| `undefined` |
-
-**Returns:** `Promise`<`T`[]>
-
-___
 <a id="destroyed"></a>
 
 ###  destroyed
@@ -136,15 +114,6 @@ ___
 *Inherited from _Readable.destroyed*
 
 *Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/readable-stream/index.d.ts:17*
-
-___
-<a id="queue"></a>
-
-###  queue
-
-**● queue**: *(`null` \| `T`)[]* =  []
-
-*Defined in [publishable.ts:20](https://github.com/strong-roots-capital/publishable/blob/425bed6/src/publishable.ts#L20)*
 
 ___
 <a id="readable"></a>
@@ -188,7 +157,7 @@ ___
 
 *Inherited from EventEmitter.defaultMaxListeners*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:8*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:18*
 
 ___
 
@@ -510,7 +479,7 @@ ___
 
 *Overrides EventEmitter.eventNames*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:23*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:33*
 
 **Returns:** `Array`<`string` \| `symbol`>
 
@@ -525,7 +494,7 @@ ___
 
 *Overrides EventEmitter.getMaxListeners*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:19*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:29*
 
 **Returns:** `number`
 
@@ -553,7 +522,7 @@ ___
 
 *Overrides EventEmitter.listenerCount*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:24*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:34*
 
 **Parameters:**
 
@@ -574,7 +543,7 @@ ___
 
 *Overrides EventEmitter.listeners*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:20*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:30*
 
 **Parameters:**
 
@@ -595,7 +564,7 @@ ___
 
 *Overrides EventEmitter.off*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:16*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:26*
 
 **Parameters:**
 
@@ -1077,7 +1046,7 @@ ___
 
 ▸ **publish**(chunk: *`T` \| `null`*): `void`
 
-*Defined in [publishable.ts:58](https://github.com/strong-roots-capital/publishable/blob/425bed6/src/publishable.ts#L58)*
+*Defined in [publishable.ts:33](https://github.com/strong-roots-capital/publishable/blob/83ddacd/src/publishable.ts#L33)*
 
 Push chunk through the Readable stream.
 
@@ -1120,7 +1089,7 @@ ___
 
 *Overrides EventEmitter.rawListeners*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:21*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:31*
 
 **Parameters:**
 
@@ -1160,7 +1129,7 @@ ___
 
 *Overrides EventEmitter.removeAllListeners*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:17*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:27*
 
 **Parameters:**
 
@@ -1320,7 +1289,7 @@ ___
 
 *Overrides EventEmitter.setMaxListeners*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:18*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:28*
 
 **Parameters:**
 
@@ -1396,7 +1365,7 @@ ___
 
 *Inherited from EventEmitter.listenerCount*
 
-*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:7*
+*Defined in /home/eric/workspace/strong-roots-capital/publishable/node_modules/@types/node/events.d.ts:17*
 
 *__deprecated__*: since v4.0.0
 
